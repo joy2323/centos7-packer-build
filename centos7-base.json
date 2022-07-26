@@ -31,7 +31,7 @@
         "ssh_username": "root",
         "ssh_password": "packer",
         "ssh_port": 22,
-        "ssh_wait_timeout": "12000s",
+        "ssh_wait_timeout": "1800s",
 
         "boot_wait": "40s",
         "boot_command": [
@@ -44,6 +44,25 @@
 
 
   "provisioners": [
-
+    {
+        "type": "shell-local",
+        "command": "tar zcf stardata-install.tar.gz stardata-install/"
+      },
+      {
+        "type": "file",
+        "source": "stardata-install.tar.gz",
+        "destination": "/root/stardata-install.tar.gz"
+      },
+      {
+        "type": "shell",
+        "pause_before": "5s",
+        "inline": [
+          "cd /root/",
+          "tar zxf stardata-install.tar.gz",
+          "cd stardata-install/",
+          "./install.sh",
+          "yum clean all"
+        ]
+    }
   ]
 }
