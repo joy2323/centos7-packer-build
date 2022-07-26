@@ -6,9 +6,12 @@
     "disk_size": "32768",
     "version": "8",
     "iso_checksum_type": "sha256",
-    "iso_checksum": "5a0dc65d1308e47b51a49e23f1030b5ee0f0ece3702483a8a6554382e893333c",
+    "iso_url": "http://centos.fastbull.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
+    "iso_checksum": "88c0437f0a14c6e2c94426df9d43cd67",
     "headless": "true",
-    "config_file": "rocky8-packer-ks.cfg",
+    "config_file": "centos7-packer-ks.cfg",
     "ssh_username": "root",
-    "ssh_password": "packer"
+    "ssh_password": "packer",
+    "ssh_port": 22,
+    "ssh_wait_timeout": "12000s"
 }

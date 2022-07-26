@@ -10,13 +10,13 @@
             [ "-smp", "cpus=1,maxcpus=16,cores=4" ]
         ],
         "disk_interface": "virtio",
-        "disk_size": "2G",
+        "disk_size": "10240",
         "format": "qcow2",
         "net_device": "virtio-net",
 
         "iso_url": "http://centos.fastbull.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
         "iso_checksum": "88c0437f0a14c6e2c94426df9d43cd67",
-        "iso_checksum_type": "md5",
+        "iso_checksum_type": "sha256",
 
         "vm_name": "centos7-base",
         "output_directory": "centos7-base-img",
@@ -29,9 +29,9 @@
         "ssh_host_port_max": 2229,
 
         "ssh_username": "root",
-        "ssh_password": "CHANGEME",
+        "ssh_password": "packer",
         "ssh_port": 22,
-        "ssh_wait_timeout": "1200s",
+        "ssh_wait_timeout": "12000s",
 
         "boot_wait": "40s",
         "boot_command": [
