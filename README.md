@@ -1,8 +1,8 @@
-## packer-kvm
+# packer-kvm
 Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration called a template. It uses different plugins as builders, provisioners or post-processors.
 
 
-### Pre-requisites
+## Pre-requisites
 To run this project with success, you need a virtualization server and packer installed:
 
 Libvirt/KVM,
@@ -11,9 +11,9 @@ Packer
 
 
 ### Libvirt and Packer Installation
-Install Livirt/KVM on your server :
+**Install Livirt/KVM on your server:**
 
-if [ -f /etc/debian_version ]; then
+`if [ -f /etc/debian_version ]; then
 apt-get update && apt-get -y upgrade
 apt-get -y install qemu-kvm libvirt-dev virtinst virt-viewer libguestfs-tools virt-manager uuid-runtime curl linux-source libosinfo-bin
 virsh net-start default
@@ -24,16 +24,16 @@ yum -y upgrade
 yum -y group install "Virtualization Host"
 yum -y install virt-manager libvirt virt-install qemu-kvm xauth dejavu-lgc-sans-fonts virt-top libguestfs-tools virt-viewer virt-manager curl
 ln -s /usr/libexec/qemu-kvm /usr/bin/qemu-system-x86_64
-fi
+fi`
 
 
-Install the Packer binary :
+**Install the Packer binary :**
 
-yum -y install wget unzip || apt update && apt -y install wget unzip
+`yum -y install wget unzip || apt update && apt -y install wget unzip
 latest=$(curl -L -s https://releases.hashicorp.com/packer | grep 'packer_' | sed 's/^.*<.*\">packer_\(.*\)<\/a>/\1/' | head -1)
 wget https://releases.hashicorp.com/packer/${latest}/packer_${latest}_linux_amd64.zip
 unzip packer*.zip
 chmod +x packer
-mv packer /usr/local/bin/
+mv packer /usr/local/bin/`
 
 ### Build with Packer
