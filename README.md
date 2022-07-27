@@ -1,13 +1,13 @@
-# packer-kvm
+# packer-centos7-kvm-image
 Packer is an open source tool for creating identical machine images for multiple platforms from a single source configuration called a template. It uses different plugins as builders, provisioners or post-processors.
 
 
 ## Pre-requisites
 To run this project with success, you need a virtualization server and packer installed:
 
-Libvirt/KVM,
+- Libvirt/KVM,
 
-Packer
+- Packer
 
 
 ### Libvirt and Packer Installation
