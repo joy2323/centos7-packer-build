@@ -5,11 +5,12 @@ Packer is an open source tool for creating identical machine images for multiple
 ### Pre-requisites
 To run this project with success, you need a virtualization server and packer installed:
 
-Libvirt/KVM, 
+Libvirt/KVM,
+
 Packer
 
 
-#### Libvirt and Packer Installation
+### Libvirt and Packer Installation
 Install Livirt/KVM on your server :
 
 if [ -f /etc/debian_version ]; then
@@ -35,4 +36,4 @@ unzip packer*.zip
 chmod +x packer
 mv packer /usr/local/bin/
 
-#### Build with Packer
+### Build with Packer
