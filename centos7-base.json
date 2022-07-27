@@ -11,7 +11,7 @@
             [ "-smp", "cpus=1,maxcpus=16,cores=4" ]
         ],
         "disk_interface": "virtio",
-        "disk_size": "10240",
+        "disk_size": "10240M",
         "format": "qcow2",
         "net_device": "virtio-net",
 
@@ -36,7 +36,7 @@
 
         "boot_wait": "20s",
         "boot_command": [
-            "<up><wait><tab><wait> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos7-kvm-ks.cfg<enter><wait>"
+            "<up><wait><tab><wait> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/http/centos7-kvm-ks.cfg<enter><wait>"
         ],
 
         "shutdown_command": "echo 'packer' | sudo -S shutdown -P now"
