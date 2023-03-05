@@ -40,7 +40,7 @@ mv packer /usr/local/bin/`
 
 To build a CentOS 7 virtual machine image using Packer on a virtual server, you will need to follow these general steps:
 
-- Connect to the virtual server via SSH as described in the previous answer.
+- Connect to the virtual server via SSH as described.
 
 - Install Packer on the virtual server by following the instructions provided in the Packer documentation.
 
