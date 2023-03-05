@@ -18,8 +18,7 @@ To execute a command on a virtual server, you must first connect to it using a r
 
 - To connect to the virtual server, use the SSH command. The command's syntax is as follows:
         `ssh username@ip_address`
-    
-***Substitute username with the virtual server's username and ip address with the virtual server's IP address or hostname.***
+    ***Substitute username with the virtual server's username and ip address with the virtual server's IP address or hostname.***
 
 - If you are connecting to the server for the first time, you will be required to accept the server's RSA key fingerprint. To accept, type "yes".
 
@@ -27,13 +26,11 @@ To execute a command on a virtual server, you must first connect to it using a r
 
 - You may run commands on the server just as you would on a local workstation once connected. To list the contents of the current directory, for example, use the ls command:
         `ls`
-
-***This will display a list of the files and folders in the virtual server's current directory.***
+            ***This will display a list of the files and folders in the virtual server's current directory.***
 
 - When you have completed working on the virtual server, log out by executing the following command: 
         `exit`
-        
-    ***This will close the SSH connection and return you to your local machine's command prompt.***
+            ***This will close the SSH connection and return you to your local machine's command prompt.***
 ### Libvirt and Packer Installation
 **Install Livirt/KVM on your server:**
 
