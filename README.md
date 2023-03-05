@@ -9,6 +9,15 @@ To run this project with success, you need a virtualization server and packer in
 
 - Packer
 
+### Connect to a Virtual Server
+To execute a command on a virtual server, you must first connect to it using a remote connection protocol such as SSH. You can run commands on the server just as you would on a local workstation once connected. To connect to a virtual server and perform a command, follow these steps:
+
+- Get the IP address or hostname of the virtual server to which you wish to connect.
+
+- On your local PC, launch a terminal or command prompt.
+
+- To connect to the virtual server, use the SSH command. The command's syntax is as follows:
+        `ssh username@ip_address`
 
 ### Libvirt and Packer Installation
 **Install Livirt/KVM on your server:**
