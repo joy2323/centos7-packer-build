@@ -37,3 +37,14 @@ chmod +x packer
 mv packer /usr/local/bin/`
 
 ### Build with Packer
+
+To build a CentOS 7 virtual machine image using Packer on a virtual server, you will need to follow these general steps:
+
+- Connect to the virtual server via SSH as described in the previous answer.
+
+- Install Packer on the virtual server by following the instructions provided in the Packer documentation.
+
+- Create a new directory to hold the Packer configuration files and change into that directory:
+    `mkdir centos7-packer
+     cd centos7-packer`
+- Create a new file named centos7-base.json in the packer-build directory with the following contents:
