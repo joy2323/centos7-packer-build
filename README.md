@@ -18,6 +18,7 @@ To execute a command on a virtual server, you must first connect to it using a r
 
 - To connect to the virtual server, use the SSH command. The command's syntax is as follows:
         `ssh username@ip_address`
+
     ***Substitute username with the virtual server's username and ip address with the virtual server's IP address or hostname.***
 
 - If you are connecting to the server for the first time, you will be required to accept the server's RSA key fingerprint. To accept, type "yes".
