@@ -18,6 +18,17 @@ To execute a command on a virtual server, you must first connect to it using a r
 
 - To connect to the virtual server, use the SSH command. The command's syntax is as follows:
         `ssh username@ip_address`
+    
+~Substitute username with the virtual server's username and ip address with the virtual server's IP address or hostname.~
+
+- If you are connecting to the server for the first time, you will be required to accept the server's RSA key fingerprint. To accept, type "yes".
+
+- When prompted, enter the user account's password. You may not be prompted for a password if you have enabled SSH key authentication.
+
+- You may run commands on the server just as you would on a local workstation once connected. To list the contents of the current directory, for example, use the ls command:
+        `ls`
+
+
 
 ### Libvirt and Packer Installation
 **Install Livirt/KVM on your server:**
@@ -54,6 +65,6 @@ To build a CentOS 7 virtual machine image using Packer on a virtual server, you 
 - Install Packer on the virtual server by following the instructions provided in the Packer documentation.
 
 - Create a new directory to hold the Packer configuration files and change into that directory:
-    `mkdir centos7-packer
-     cd centos7-packer`
+        `mkdir centos7-packer
+        cd centos7-packer`
 - Create a new file named centos7-base.json in the packer-build directory with the following contents:
