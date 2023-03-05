@@ -67,6 +67,20 @@ To build a CentOS 7 virtual machine image using Packer on a virtual server, you 
 - Install Packer on the virtual server by following the instructions provided in the Packer documentation.
 
 - Create a new directory to hold the Packer configuration files and change into that directory:
-        `mkdir centos7-packer
-        cd centos7-packer`
-- Create a new file named centos7-base.json in the packer-build directory with the following contents:
+        `mkdir centos7-packer`
+        `cd centos7-packer`
+
+- Create a new file named centos7-base.json in the packer-build directory with the contents in the `centos7-base.json` file.
+- In the same directory as your JSON template file, create a http directory.
+
+- Inside the http directory, create a file called `centos7-kvm-ks.cfg`. This file should include a Boostrap setup that will be used to automate the CentOS 7 installation.
+
+- Run the following command to validate the Packer configuration file:
+        `packer validate centos7-base.json`
+
+- If the Packer configuration file is valid, execute the following command to build the new CentOS 7 virtual machine image:
+        `packer build centos7.json`
+
+- This will create a new virtual machine image in the output-centos7 directory that can be used to start new CentOS 7 instances.
+
+***Please keep in mind that this is my setup and that you may need to adjust it depending on your individual needs and environment. For additional information on how to modify your settings, consult the Packer manual.***
